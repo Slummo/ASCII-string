@@ -12,7 +12,7 @@ function populateSelectFont(fonts) {
 }
 
 function fetchFonts() {
-  const url = "http://localhost:8888/fonts?list=False";
+  const url = "/fonts?list=False";
   console.log("Fetching fonts...");
 
   const requestOptions = {
@@ -38,7 +38,7 @@ function fetchFonts() {
 }
 
 function fetchAscii(string, font) {
-  const url = "http://localhost:8888/ascii?string=" + string + "&font=" + font;
+  const url = "/ascii?string=" + string + "&font=" + font;
   console.log("Fetching ascii...");
 
   const requestOptions = {
@@ -66,6 +66,10 @@ function fetchAscii(string, font) {
 
 window.addEventListener("load", () => {
   fetchFonts();
+});
+
+window.addEventListener("beforeunload", (e) => {
+  e.preventDefault();
 });
 
 formAscii.addEventListener("submit", (e) => {
