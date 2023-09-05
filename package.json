@@ -1,0 +1,20 @@
+{
+  "name": "ascii-string",
+  "version": "1.0.0",
+  "description": "A simple app that converts a string into ascii art",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Marchisio Luca",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "figlet": "^1.6.0",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
